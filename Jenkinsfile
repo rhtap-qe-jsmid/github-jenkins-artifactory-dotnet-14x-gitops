@@ -38,7 +38,7 @@ pipeline {
         /* Set this password for your specific registry */
         /* IMAGE_REGISTRY_PASSWORD = credentials('IMAGE_REGISTRY_PASSWORD') */
         QUAY_IO_CREDS = credentials('QUAY_IO_CREDS')
-        /* ARTIFACTORY_IO_CREDS = credentials('ARTIFACTORY_IO_CREDS') */
+        ARTIFACTORY_IO_CREDS = credentials('ARTIFACTORY_IO_CREDS')
         /* NEXUS_IO_CREDS = credentials('NEXUS_IO_CREDS') */
         /* Set when using Jenkins on non-local cluster and using an external Rekor instance */
         /* REKOR_HOST = credentials('REKOR_HOST') */
