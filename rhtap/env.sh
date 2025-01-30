@@ -6,11 +6,11 @@ CI_TYPE=${CI_TYPE:-jenkins}
 
 # from buildah-rhtap
 TAG=$(git rev-parse HEAD)
-export IMAGE_URL=${IMAGE_URL-artifactory-artifactory-jcr.apps.rosa.rhtap-services.xmdt.p3.openshiftapps.com/rhtap-docker-local/rhtap-qe-jsmid:$CI_TYPE-$TAG}
+export IMAGE_URL=${IMAGE_URL-quay.io/redhat-appstudio/dance-bootstrap-app:latest:$CI_TYPE-$TAG}
 export IMAGE=${IMAGE-$IMAGE_URL}
 
-export DOCKERFILE=${DOCKERFILE-docker/Dockerfile}
-export CONTEXT=${CONTEXT-.}
+export DOCKERFILE=${DOCKERFILE-}
+export CONTEXT=${CONTEXT-}
 export TLSVERIFY=${TLSVERIFY-false}
 export BUILD_ARGS=${BUILD_ARGS-""}
 export BUILD_ARGS_FILE=${BUILD_ARGS_FILE-""}
